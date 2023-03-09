@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h1>MATCHES</h1>
+{% for match in matches %}
+<p class="white fw-600 fs-m3 mb-5">{{match.team1}} - {{match.team2}} {{match.team1_goals}} : {{match.team2_goals}} {{match.date}} {{match.time}}</p>
+<input type="submit">
+{% endfor %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+<body class="bg-black muli">
+
+    <h1 class="white fw-600 fs-m3 mb-5">Sign Up Below </h1>
+    <style>
+    h5{
+        color: red;
+    }
+    </style>
+    {% for message in messages %}
+    <h5 class="red fw-600 fs-m3 mb-5">{{message}}</h5>
+    {% endfor %}
+    <form method= 'POST' action="register">
+        {% csrf_token %}
+        <p class="white fw-600 fs-m3 mb-5">Username:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="text" name="username"/>
+        <p class="white fw-600 fs-m3 mb-5">First Name:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="text" name="first_name"/>
+        <p class="white fw-600 fs-m3 mb-5">Last Name:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="text" name="last_name"/>
+        <p class="white fw-600 fs-m3 mb-5">Email:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="email" name="email"/>
+        <p class="white fw-600 fs-m3 mb-5">Password:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="password" name="password"/>
+        <p class="white fw-600 fs-m3 mb-5">Repeat Password:</p>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="password" name="password2"/>
+        <input class="button bg-white black fw-600 no-underline mx-5" type="submit":/>
+    </form>
+</body>
+</html>
+
